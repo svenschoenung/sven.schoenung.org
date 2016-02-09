@@ -1,0 +1,60 @@
+body {
+	max-width:800px;
+	margin:0 auto;
+}
+
+main, header {
+	margin:10px;
+}
+
+* {
+	font-family:'Raleway', sans-serif;
+}
+
+h1,h2 {
+	margin-left:5px;
+	font-weight:normal;
+}
+
+a {
+	text-decoration:none;
+}
+
+.tiles .tile {
+	position:relative;
+	float:left;
+	width:150px;
+	height:150px;
+	padding:0px;
+	margin:5px
+}
+
+.tiles .tile img {
+	display:block;
+	width:100%;
+	height:100%;
+}
+.tiles .tile .desc {
+	display:none;
+}
+
+.tiles .tile:hover .desc {
+	display:block;
+	position:absolute;
+	background:#f0f0f0;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	opacity: 0.70;
+	filter: alpha(opacity=70);
+}
+
+.tiles .tile .desc .center {
+	display:block;
+	color:black;
+	text-align:center;
+	position:relative;
+	top:50%;
+	transform: translateY(-50%);
+}
