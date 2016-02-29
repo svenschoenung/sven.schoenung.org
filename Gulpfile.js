@@ -13,6 +13,7 @@ PATH.DEST = 'www';
 PATH.HTML = PATH.SRC + '/**/*.html';
 PATH.CSS = PATH.SRC + '/**/*.css';
 PATH.IMAGES = PATH.SRC + '/images/**/*';
+PATH.GPG = PATH.SRC + '/**/public.gpg';
 
 function cachebust() {
   return buster({
@@ -22,6 +23,11 @@ function cachebust() {
     hashLength: 32, hashParam: 'hash',
   });
 }
+
+gulp.task('gpg', () => {
+  return gulp.src(PATH.GPG)
+    .pipe(gulp.dest(PATH.DEST));
+});
 
 gulp.task('html', ['css', 'images'], () => {
   return gulp.src(PATH.HTML)
@@ -45,7 +51,7 @@ gulp.task('images', () => {
     .pipe(hasher());
 });
 
-gulp.task('default', ['html']);
+gulp.task('default', ['html', 'gpg']);
 
 gulp.task('serve', () => {
   return gulp.src(PATH.DEST)
@@ -55,6 +61,7 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', () => {
+  gulp.watch(PATH.GPG, ['gpg']);
   gulp.watch(PATH.HTML, ['html']);
   gulp.watch(PATH.CSS, ['css']);
   gulp.watch(PATH.IMAGES, ['images']);
