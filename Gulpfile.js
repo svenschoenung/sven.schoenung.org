@@ -66,3 +66,5 @@ gulp.task('watch', () => {
   gulp.watch(PATH.CSS, ['css']);
   gulp.watch(PATH.IMAGES, ['images']);
 });
+
+gulp.task('dev', ['default', 'serve', 'watch' ]);
