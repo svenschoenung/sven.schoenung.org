@@ -17,10 +17,10 @@
     "gulp-buster": "^1.0.0",
     "gulp-cache-bust": "^1.0.2",
     "gulp-cache-buster": "^0.2.1",
-    "gulp-cssnano": "^2.1.1",
     "gulp-hasher": "^0.1.0",
     "gulp-htmlmin": "^1.3.0",
     "gulp-imagemin": "^2.4.0",
+    "gulp-minify-css": "^1.2.4",
     "gulp-webserver": "^0.9.1"
   }
 }

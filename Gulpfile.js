@@ -1,7 +1,7 @@
 const path = require('path');
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
-const cssnano = require('gulp-cssnano');
+const minifyCss = require('gulp-minify-css');
 const imagemin = require('gulp-imagemin');
 const hasher = require('gulp-hasher');
 const buster = require('gulp-cache-buster');
@@ -32,7 +32,7 @@ gulp.task('html', ['css', 'images'], () => {
 
 gulp.task('css', ['images'], () => {
   return gulp.src(PATH.CSS)
-    .pipe(cssnano())
+    .pipe(minifyCss())
     .pipe(cachebust())
     .pipe(gulp.dest(PATH.DEST))
     .pipe(hasher());
