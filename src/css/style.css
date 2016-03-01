@@ -91,3 +91,27 @@ a {
 	top:50%;
 	transform: translateY(-50%);
 }
+
+@media screen and (max-width: 819px) {
+	body {
+		max-width:660px;
+	}
+}
+
+@media screen and (max-width: 659px) {
+	body {
+		max-width:500px;
+	}
+}
+
+@media screen and (max-width: 659px) {
+	body {
+		max-width:500px;
+	}
+}
+
+@media screen and (max-width: 499px) {
+	body {
+		max-width:340px;
+	}
+}
