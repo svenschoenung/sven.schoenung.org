@@ -12,5 +12,8 @@ env:
     - secure: "bo4Uc5C1Clds7aemjns0COQCKIOZTXsuduBm/9wH57vJqLdpaEMQwP/0O3BfAQBeltXSBF81fZccP/xkPM4cc0zsFjQXbGGXjJ/xBlLq18R36cMOq+DGchTxjbJPbiHw4MtRm8u4vPxlMX28APT+89/d3Yk8ImCbfrQwJiNuOZGKxmpWrcwsUud3Joxnq/NKyQ0HhAuXbOCev7G2zScZTYqZXIRYqPqwL6k/aYkjMD/k/EcfKc2UaHV+FcEe2VK3U9gJYe7nCqAAoVc2WWG7tpfJyiM/iBonZ7Xu35vJq8GM5oSpXTmQI1heDsDTyl3UuxrXxZ3yZcObzQ5CwwAk0dmSKWcBtpR2N8WhbCm0YdpMkvF+Rub/TT7s/nWDk71Pu4mQwPB0+J8NkCkEid2vSJeO7DZzmWSlmDTi0SHuvNPlnY2ZYUqrF6xKtGXlQh6F0TvmQIdI97TfRWCG5N/YpVq+JJ6h48WwookPlOIEUzk5xHyt77J93Tj429SXwjyXZ3uvlQy3cBy+/szi7icM1FdfTEDnUhBQ8W4xm0l7f448pv3EjcA7XAAPYirny8nrzrazXr0/lz4UrPSL3agvmC2v8dMoFVtH2g2M3upNemNiRKhovyxMwa9d85Xv04g+NXSSvV3SFdifs+P8ClB+RA+rx4IVb//72Xfylslm5TY="
 script:
   - npm run gulp
-after_success:
-  - ./deploy.sh
+deploy:
+  provider: script
+  script: ./deploy.sh
+  on:
+    branch: master
