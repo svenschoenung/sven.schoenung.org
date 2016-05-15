@@ -6,6 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/svenschoenung/sven.schoenung.org.git"
   },
+  "private": true,
   "author": "Sven Schoenung",
   "license": "MIT",
   "homepage": "http://sven.schoenung.org/",
