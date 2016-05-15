@@ -4,8 +4,6 @@ set -o errexit
 set -o nounset
 set -o pipefail
 
-echo "SSHTEST=$SSHTEST"
-
 echo "Deleting old deployment directory"
 sshpass -e ssh $SSHUSER@schoenung.org "rm -rf /var/www/schoenung.org-deploy"
 
