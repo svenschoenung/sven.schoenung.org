@@ -2,6 +2,10 @@ sudo: false
 language: node_js
 node_js:
   - "4"
+addons:
+  apt:
+    packages:
+      - sshpass
 env:
   global:
     - secure: "J3UaXXLoNdTxkElAvwoh9TpotplrwdNnuNabk3jZkTJsQWuNugwp/7VAbmAyUJ5x68OeWRl300rOgNzqg7qdhmAO2UuUGKIylebfeS3Tixi2dkgfOwUs5zDUe0TBRebe+JKUyq+bYcmuJePy5FMh04bxbKtjL9Y0grQ1TqwKbgs4jg7m2JfWxG0OfvGuO3xW448i1W7EU9oQrGRY11oKiaByU95F605f2aedqqB4a1lV1sjntWJTRH1QpNwxr2Su992UAPPwC1NSWHOeq3c3eFdqWXhMA12/qVO4692S/6f3sSRikNRavyWeLzdakbQdnYk8C8S52wZcEy1KhjykZpsJS8+ruzeQKjyWPAgI/H/lXo1DjD3jG0Jhcjij3rLjnPZycAn4JnmRIoliNuw5yFLSM2ovPln2VtGa53liPgMcAwIM904xMCRV5Jv+pGNgQ4FKsv2u99bPbAoMayzZsVPWlh0pACipGOXZ3Kw/Nn1QzA29rfsIJdnIZ7Nteml4ckYZsvegHTB8ORV0GpHlUA8+hiqcdUpaaePcHmwTZGEQW2Jmvz06izaLS8v1HM5BE95KvCWXKp7jzpZIrONnAw2p4+R1LSGVGNuK0Nxrrq61Z5udVpJA3DLE9GJeguNHwylZ4NtmqSdyNfYUeVWy2KLLge2SFef/lZoPJpcWx84="
