@@ -3,8 +3,8 @@ const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const minifyCss = require('gulp-minify-css');
 const imagemin = require('gulp-imagemin');
-const webserver = require('gulp-webserver');
 const RevAll = require('gulp-rev-all');
+const browserSync = require('browser-sync');
 
 const PATH = {};
 PATH.SRC = 'src';
@@ -22,19 +22,22 @@ gulp.task('gpg', () => {
 gulp.task('html', () => {
   return gulp.src(PATH.HTML)
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(PATH.DEST));
+    .pipe(gulp.dest(PATH.DEST))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('css', () => {
   return gulp.src(PATH.CSS)
     .pipe(minifyCss())
     .pipe(gulp.dest(PATH.DEST))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
   return gulp.src(PATH.IMAGES, { base: PATH.SRC })
     .pipe(imagemin({optimizationLevel:3}))
     .pipe(gulp.dest(PATH.DEST))
+    .pipe(browserSync.stream());
 });
 
 gulp.task('www', ['html', 'gpg', 'css', 'images']);
@@ -53,10 +56,11 @@ gulp.task('dist', ['www'], () => {
 gulp.task('default', ['dist']);
 
 gulp.task('serve', () => {
-  return gulp.src(PATH.DEST)
-    .pipe(webserver({
-      livereload: true,
-    }));
+  browserSync.init({
+    server: {
+      baseDir:'www'
+    }
+  });
 });
 
 gulp.task('watch', () => {
