@@ -12,7 +12,7 @@ PATH.DEST = 'www';
 PATH.HTML = PATH.SRC + '/**/*.html';
 PATH.CSS = PATH.SRC + '/**/*.css';
 PATH.IMAGES = PATH.SRC + '/images/**/*';
-PATH.GPG = PATH.SRC + '/**/public.gpg';
+PATH.GPG = [PATH.SRC + '/public.gpg', PATH.SRC + '/keybase.txt'];
 
 gulp.task('gpg', () => {
   return gulp.src(PATH.GPG)
@@ -44,9 +44,9 @@ gulp.task('www', ['html', 'gpg', 'css', 'images']);
 
 gulp.task('dist', ['www'], () => {
   const revAll = new RevAll({
-    dontRenameFile: [/\.html$/, /\.gpg$/],
-    dontUpdateReference: [/\.html$/, /\.gpg$/],
-    dontSearchFile: [/\.png$/, /\.jpg$/, /\.gpg$/]
+    dontRenameFile: [/\.html$/, /\.gpg$/, /\.txt$/],
+    dontUpdateReference: [/\.html$/, /\.gpg$/, /\.txt$/],
+    dontSearchFile: [/\.png$/, /\.jpg$/, /\.gpg$/, /\.txt$/]
   });
   return gulp.src(PATH.DEST + '/**')
     .pipe(revAll.revision())

@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/svenschoenung
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://sven.schoenung.org
+  * I am svenschoenung (https://keybase.io/svenschoenung) on keybase.
+  * I have a public key ASAmP2mMpeGbEomss8bXUJ3k3GLG1nREg0RfResEGh-XTQo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0120263f698ca5e19b1289acb3c6d7509de4dc62c6d6744483445f45eb041a1f974d0a",
+            "host": "keybase.io",
+            "kid": "0120263f698ca5e19b1289acb3c6d7509de4dc62c6d6744483445f45eb041a1f974d0a",
+            "uid": "41fdc3fa3eb5c57aaba8cccd015ed519",
+            "username": "svenschoenung"
+        },
+        "service": {
+            "hostname": "sven.schoenung.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.18"
+    },
+    "ctime": 1483380799,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1483380752,
+        "hash": "76f22945323f57e37a69b4d3ada8ab9ecd76692252d30f441d040e0e9d0b8f1bd811efbae013f0c7482fd441a8e19a756f7157a968c13f6abdc3713945ea4fa9",
+        "seqno": 782285
+    },
+    "prev": "d27f1a3db9b2acecd60c9b30d7e78732947e9da9759770027f00229876d11c4f",
+    "seqno": 7,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgJj9pjKXhmxKJrLPG11Cd5NxixtZ0RINEX0XrBBofl00Kp3BheWxvYWTFAv57ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwMjYzZjY5OGNhNWUxOWIxMjg5YWNiM2M2ZDc1MDlkZTRkYzYyYzZkNjc0NDQ4MzQ0NWY0NWViMDQxYTFmOTc0ZDBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwMjYzZjY5OGNhNWUxOWIxMjg5YWNiM2M2ZDc1MDlkZTRkYzYyYzZkNjc0NDQ4MzQ0NWY0NWViMDQxYTFmOTc0ZDBhIiwidWlkIjoiNDFmZGMzZmEzZWI1YzU3YWFiYThjY2NkMDE1ZWQ1MTkiLCJ1c2VybmFtZSI6InN2ZW5zY2hvZW51bmcifSwic2VydmljZSI6eyJob3N0bmFtZSI6InN2ZW4uc2Nob2VudW5nLm9yZyIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTgifSwiY3RpbWUiOjE0ODMzODA3OTksImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ4MzM4MDc1MiwiaGFzaCI6Ijc2ZjIyOTQ1MzIzZjU3ZTM3YTY5YjRkM2FkYThhYjllY2Q3NjY5MjI1MmQzMGY0NDFkMDQwZTBlOWQwYjhmMWJkODExZWZiYWUwMTNmMGM3NDgyZmQ0NDFhOGUxOWE3NTZmNzE1N2E5NjhjMTNmNmFiZGMzNzEzOTQ1ZWE0ZmE5Iiwic2Vxbm8iOjc4MjI4NX0sInByZXYiOiJkMjdmMWEzZGI5YjJhY2VjZDYwYzliMzBkN2U3ODczMjk0N2U5ZGE5NzU5NzcwMDI3ZjAwMjI5ODc2ZDExYzRmIiwic2Vxbm8iOjcsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RABZT5dTWlcoaeUCdvhJoYin0XA/MKDsC610v4/8S5q/Ib83r7bEE40TdnEncYOz3DJIsv2ixQmXeR7XR2gEtHBKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEICfegKSAbH+oII2GQjPiX6M7OWWkDPMtZ7TjwK7O3WDTo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/svenschoenung
+
+==================================================================
