@@ -52,13 +52,48 @@ a {
 	text-decoration:underline;
 }
 
+.tags {
+	margin:0px 5px;
+}
+
+.tag {
+	display:inline-block;
+	margin:3px 0px;
+	background:#f0f0f0;
+	border-radius:5px;
+	padding:2px 5px;
+	cursor:pointer;
+}
+
+.tag i {
+	margin-right:5px;	
+}
+
+.tag.active {
+	background:black;
+	color:white;
+}
+
 .tiles .tile {
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+
 	position:relative;
 	float:left;
 	width:150px;
 	height:150px;
 	padding:0px;
 	margin:5px
+}
+
+.tiles .tile.hidden {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
 }
 
 .tiles .tile img {
@@ -115,3 +150,5 @@ a {
 		max-width:340px;
 	}
 }
+
+

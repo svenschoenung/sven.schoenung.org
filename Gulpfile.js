@@ -5,50 +5,53 @@ const minifyCss = require('gulp-minify-css');
 const imagemin = require('gulp-imagemin');
 const RevAll = require('gulp-rev-all');
 const browserSync = require('browser-sync');
+const uglify = require('gulp-uglify');
+const concat = require('gulp-concat');
 
-const PATH = {};
-PATH.SRC = 'src';
-PATH.DEST = 'www';
-PATH.HTML = PATH.SRC + '/**/*.html';
-PATH.CSS = PATH.SRC + '/**/*.css';
-PATH.IMAGES = PATH.SRC + '/images/**/*';
-PATH.GPG = [PATH.SRC + '/public.gpg', PATH.SRC + '/keybase.txt'];
-
-gulp.task('gpg', () => {
-  return gulp.src(PATH.GPG)
-    .pipe(gulp.dest(PATH.DEST));
+gulp.task('keys', () => {
+  return gulp.src(['src/public.gpg', 'src/keybase.txt'])
+    .pipe(gulp.dest('www'));
 });
 
 gulp.task('html', () => {
-  return gulp.src(PATH.HTML)
+  return gulp.src('src/**/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(PATH.DEST))
+    .pipe(gulp.dest('www'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('css', () => {
-  return gulp.src(PATH.CSS)
+  return gulp.src('src/css/**/*.css')
+    .pipe(concat('css/style.min.css'))
     .pipe(minifyCss())
-    .pipe(gulp.dest(PATH.DEST))
+    .pipe(gulp.dest('www'))
+    .pipe(browserSync.stream());
+});
+
+gulp.task('js', () => {
+  return gulp.src('src/js/**/*.js')
+    .pipe(concat('js/script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('www'))
     .pipe(browserSync.stream());
 });
 
 gulp.task('images', () => {
-  return gulp.src(PATH.IMAGES, { base: PATH.SRC })
+  return gulp.src('src/images/**/*', { base: 'src' })
     .pipe(imagemin({optimizationLevel:3}))
-    .pipe(gulp.dest(PATH.DEST))
+    .pipe(gulp.dest('www'))
     .pipe(browserSync.stream());
 });
 
-gulp.task('www', ['html', 'gpg', 'css', 'images']);
+gulp.task('www', ['html', 'keys', 'css', 'js', 'images']);
 
 gulp.task('dist', ['www'], () => {
   const revAll = new RevAll({
-    dontRenameFile: [/\.html$/, /\.gpg$/, /\.txt$/],
-    dontUpdateReference: [/\.html$/, /\.gpg$/, /\.txt$/],
-    dontSearchFile: [/\.png$/, /\.jpg$/, /\.gpg$/, /\.txt$/]
+    dontRenameFile: [/\.(html|gpg|txt)$/],
+    dontUpdateReference: [/\.(html|gpg|txt)$/],
+    dontSearchFile: [/\.(png|jpg|gpg|txt)$/]
   });
-  return gulp.src(PATH.DEST + '/**')
+  return gulp.src('www/**')
     .pipe(revAll.revision())
     .pipe(gulp.dest('dist'));
 });
@@ -64,10 +67,11 @@ gulp.task('serve', () => {
 });
 
 gulp.task('watch', () => {
-  gulp.watch(PATH.GPG, ['gpg']);
-  gulp.watch(PATH.HTML, ['html']);
-  gulp.watch(PATH.CSS, ['css']);
-  gulp.watch(PATH.IMAGES, ['images']);
+  gulp.watch(['src/public.gpg', 'src/keybase.txt'], ['keys']);
+  gulp.watch(['src/**/*.html'], ['html']);
+  gulp.watch(['src/css/**/*.css'], ['css']);
+  gulp.watch(['src/js/**/*.js'], ['js']);
+  gulp.watch(['src/images/**/*'], ['images']);
 });
 
 gulp.task('dev', ['www', 'serve', 'watch' ]);
