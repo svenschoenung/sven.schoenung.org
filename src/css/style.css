@@ -3,8 +3,22 @@ body {
 	margin:0 auto;
 }
 
-main, header {
+main, header, nav {
 	margin:10px;
+}
+
+main {
+	clear:both;
+}
+
+header {
+	float:left;
+}
+
+nav {
+	float:right;
+	margin-top:20px;
+	margin-right:20px;
 }
 
 * {
@@ -12,9 +26,7 @@ main, header {
 }
 
 h1,h2 {
-	margin-top:10px;
-	margin-bottom:5px;
-	margin-left:5px;
+	margin:5px;
 	font-weight:normal;
 	clear:both;
 }
@@ -54,15 +66,19 @@ a {
 
 .tags {
 	margin:0px 5px;
+	font-size:85%;
 }
 
 .tag {
 	display:inline-block;
 	margin:3px 0px;
 	background:#f0f0f0;
-	border-radius:5px;
 	padding:2px 5px;
 	cursor:pointer;
+}
+
+.tag:hover {
+	background:#ddd;
 }
 
 .tag i {
@@ -130,12 +146,6 @@ a {
 @media screen and (max-width: 819px) {
 	body {
 		max-width:660px;
-	}
-}
-
-@media screen and (max-width: 659px) {
-	body {
-		max-width:500px;
 	}
 }
 

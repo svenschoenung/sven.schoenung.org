@@ -18,7 +18,6 @@ $('.tag').click(function() {
     var $tile = $(tile);
     var tileTags = $tile.attr('data-tags').split(/ /);
     if ($.inArray(activeTag, tileTags) >= 0) {
-console.log(tileTags);
       $tile.removeClass('hidden');
     } else {
       $tile.addClass('hidden');
