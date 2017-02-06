@@ -31,6 +31,10 @@ h1,h2 {
 	clear:both;
 }
 
+h2 {
+	padding-top:20px;
+}
+
 a {
 	text-decoration:none;
 	color:black;
