@@ -7,6 +7,7 @@ const RevAll = require('gulp-rev-all');
 const browserSync = require('browser-sync');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
+const webp = require('gulp-webp');
 
 gulp.task('keys', () => {
   return gulp.src(['src/public.gpg', 'src/keybase.txt'])
@@ -39,6 +40,9 @@ gulp.task('js', () => {
 gulp.task('images', () => {
   return gulp.src('src/images/**/*', { base: 'src' })
     .pipe(imagemin({optimizationLevel:3}))
+    .pipe(gulp.dest('www'))
+    .pipe(browserSync.stream())
+    .pipe(webp())
     .pipe(gulp.dest('www'))
     .pipe(browserSync.stream());
 });
