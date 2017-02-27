@@ -166,6 +166,6 @@ a {
 }
 
 
-.wf-loading {
-	color:white;
+.no-fonts, .no-fonts a {
+	color:transparent!important; 
 }

@@ -1,12 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-    <script>WebFont.load({google:{families:['Raleway:200']}});</script>
-    <noscript>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200" type="text/css" />
-    </noscript>
-
     <meta charset="utf-8"/>
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <title>Sven Schönung</title>
@@ -16,8 +10,13 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
+    
   </head>
   <body>
+  <script>
+  document.getElementsByTagName("body")[0].className='no-fonts';
+  setTimeout(function() {document.getElementsByTagName("body")[0].className='';},5000);
+  </script>
 
   <header>
     <h1>Sven Schönung</h1>
@@ -244,6 +243,11 @@
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
   <script src="js/script.min.js"></script>
+  <noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200" type="text/css" />
+  </noscript>
+
   </body>
 </html>
