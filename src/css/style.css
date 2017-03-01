@@ -76,6 +76,7 @@ a {
 .tag {
 	display:inline-block;
 	margin:3px 0px;
+	margin-right:5px;       
 	background:#f0f0f0;
 	padding:2px 5px;
 	cursor:pointer;
