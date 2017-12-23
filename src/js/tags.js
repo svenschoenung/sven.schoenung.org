@@ -1,8 +1,8 @@
 (function() {
   var $tags = [
     'all',
-    'crypto', 'docs', 'games', 'images',
-    'news', 'music', 'code', 'social'
+    'crypto', 'code', 'docs', 'film', 'games', 'images',
+    'music', 'news', 'social'
   ].map(function(tag) {
     var $tag = $('<span class="tag" data-tag="' + tag + '"><i class="fa fa-tag"></i>' + tag + '</span>');
 
