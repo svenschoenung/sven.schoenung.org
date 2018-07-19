@@ -8,6 +8,7 @@ const browserSync = require('browser-sync');
 const uglify = require('gulp-uglify');
 const concat = require('gulp-concat');
 const webp = require('gulp-webp');
+const nunjucks = require('gulp-nunjucks-render');
 
 gulp.task('keys', () => {
   return gulp.src(['src/public.gpg', 'src/keybase.txt'])
@@ -15,7 +16,8 @@ gulp.task('keys', () => {
 });
 
 gulp.task('html', () => {
-  return gulp.src('src/**/*.html')
+  return gulp.src('src/html/**/*.html')
+    .pipe(nunjucks({path:['src/html']}))
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('www'))
     .pipe(browserSync.stream());
@@ -72,7 +74,7 @@ gulp.task('serve', () => {
 
 gulp.task('watch', () => {
   gulp.watch(['src/public.gpg', 'src/keybase.txt'], ['keys']);
-  gulp.watch(['src/**/*.html'], ['html']);
+  gulp.watch(['src/html/**/*.{html,nj}'], ['html']);
   gulp.watch(['src/css/**/*.css'], ['css']);
   gulp.watch(['src/js/**/*.js'], ['js']);
   gulp.watch(['src/images/**/*'], ['images']);
