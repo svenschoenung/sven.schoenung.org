@@ -195,6 +195,12 @@ footer ul li {
 }
 
 
-.no-fonts, .no-fonts a {
-	color:transparent!important; 
+.no-fonts span, .no-fonts a {
+	color:#eee!important;
+	background:#eee!important;
+}
+
+span, a {
+	transition:background 0.5s, color 0.5s;
+	transition-timing-function: ease-in-out;
 }
