@@ -7,7 +7,7 @@
     <meta name="description" content="Personal website of Sven Schönung" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="google-site-verification" content="mPgfJh0PVLfQQD0kT_TG-08sH0LamGYX-NbVrpqRGO4" />
-    <link rel="stylesheet" href="css/style.min.css" />
+    <link rel="stylesheet" href="/css/style.min.css" />
   </head>
   <body>
   <script>
@@ -15,7 +15,7 @@
   setTimeout(function() {document.getElementsByTagName("body")[0].className='';},5000);
   </script>
 
-  <nav></nav>
+  <nav><a href="/privacy"><span>Privacy</span></a></nav>
 
   <header>
     <h1><a href="/"><span>Sven Schönung</span></a></h1>
@@ -27,15 +27,9 @@
 
   </main>
 
-  <footer>
-    <ul>
-      <li><a href="/privacy"><span>Privacy</span></a></li>
-    </ul>
-  </footer>
-
   <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-  <script src="js/script.min.js"></script>
+  <script src="/js/script.min.js"></script>
   <noscript>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:200" type="text/css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />

@@ -53,6 +53,33 @@ main > p {
 	clear:both;
 }
 
+.privacy-popup {
+	margin:10px;
+	text-align:right;
+	display:none;
+}
+
+.privacy-popup a {
+	text-decoration:underline;	
+}
+
+.privacy-setting i {
+	width:1.2em;
+}
+
+.privacy-setting span * {
+	cursor:pointer;
+}
+
+.privacy h3 {
+	margin-top:30px;
+}
+
+.privacy p {
+	margin-left:5px;
+	margin-right:5px;
+}
+
 .about img.me {
 	width:100px;
 	height:100px;
@@ -213,9 +240,11 @@ footer ul li {
 	padding:0;
 	display:inline-block;
 }
+
 footer ul li:first-child:before {
 	content:"";
 }
+
 footer ul li:before {
 	content:" | ";
 }
