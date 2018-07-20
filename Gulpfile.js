@@ -52,13 +52,12 @@ gulp.task('images', () => {
 gulp.task('www', ['html', 'keys', 'css', 'js', 'images']);
 
 gulp.task('dist', ['www'], () => {
-  const revAll = new RevAll({
-    dontRenameFile: [/\.(html|gpg|txt)$/],
-    dontUpdateReference: [/\.(html|gpg|txt)$/],
-    dontSearchFile: [/\.(png|jpg|gpg|txt)$/]
-  });
   return gulp.src('www/**')
-    .pipe(revAll.revision())
+    .pipe(RevAll.revision({
+      dontRenameFile: [/\.(html|gpg|txt)$/],
+      dontUpdateReference: [/\.(html|gpg|txt)$/],
+      dontSearchFile: [/\.(png|jpg|gpg|txt)$/]
+    }))
     .pipe(gulp.dest('dist'));
 });
 
