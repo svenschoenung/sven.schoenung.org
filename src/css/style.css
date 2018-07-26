@@ -36,7 +36,7 @@ h1,h2 {
 }
 
 h2 {
-	padding-top:20px;
+	padding-top:50px;
 }
 
 a {
@@ -152,6 +152,8 @@ main > p {
 	margin-right:15px;
 	width:310px;
 	border:1px solid #ccc;
+	margin-left:4px;
+	margin-top:4px;
 }
 
 .tile-with-desc .desc {
